@@ -1,0 +1,509 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Navbar */
+#navbar .navbar-brand {
+    color: #f3433b;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#navbarCollapse li a {
+    margin-right: 2rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+#navbarCollapse .magnifier {
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+
+/* Section: Home */
+#homeSection {
+    background: url(./img/header.jpg) no-repeat center center/cover;
+    height: 625px;
+    color: #fff;
+}
+
+#homeSection .dark-overlay {
+    top: 0;
+    left: 0;
+    height: 625px;
+    padding-top: 10rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#homeSection h1 {
+    font-size: 4rem;
+}
+
+#homeSection button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    width: 200px;
+}
+
+#homeSection .button-container button:first-child {
+    background: #f3433b;
+    color: #fff;
+}
+
+#homeSection .button-container button:last-child {
+    background: #fff;
+    color: #f3433b;
+    border: 1px #f3433b solid;
+}
+
+#homeSection #explore {
+    margin-top: 5rem;
+}
+
+#homeSection #explore button {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px  rgba(255, 255, 255, 0.3) solid;
+}
+
+
+/* Section: About Us */
+#aboutUs {
+    padding: 5rem 0;
+    background: #f4f4f4;
+}
+
+#aboutUs img {
+    width: 100%;
+}
+
+#aboutUs .container {
+    display: flex;
+}
+
+#aboutUs .container-hover {
+    background-color: #f3433b;
+    width: 5px;
+}
+
+#aboutUs .cards-container .card {
+    margin-bottom: 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+}
+
+#aboutUs .cards-container .card:hover::before {
+    width: 1.88rem;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#aboutUs .cards-container .card::before {
+    transition: width .3s linear, opacity .3s linear, visibility .3s linear;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0.25rem;
+    content: "";
+    position: absolute;
+    border-radius: .19rem 0 0 .19rem;
+    background-color: #f3433b;
+}
+
+#aboutUs .cards-container .card::after {
+    background-image: linear-gradient(-225deg, #f3433b, #f3ad17);
+    background-repeat: repeat-x;
+    transition: width .3s linear;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    border-radius: .19rem 0 0 .19rem;
+}
+
+#aboutUs .cards-container .card:hover::after {
+    width: 100%;
+}
+
+#aboutUs .cards-container .card:hover i,
+#aboutUs .cards-container .card:hover .card-icon,
+#aboutUs .cards-container .card:hover h3, 
+#aboutUs .cards-container .card:hover .card-link {
+    color: #fff;
+    transition: color .3s linear;
+    z-index: 1;
+}
+
+#aboutUs .card i, .card-link {
+    color: #f3433b;
+}
+
+
+/* Section: Our Services */
+#ourServices {
+    padding: 5rem 0;
+    background: #eaeaea;
+}
+
+#ourServices .card {
+    background: transparent;
+    border: none;
+}
+
+#ourServices .card::before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 0.25rem;
+    content: "";
+    position: absolute;
+    border-radius: .19rem 0 0 .19rem;
+    background-color: #f3433b;
+}
+
+#ourServices .container-icons {
+    padding-top: 4rem;
+}
+
+#ourServices .container-icons .logo {
+    border-radius: 50%;
+    background-image: linear-gradient(-225deg, #f3433b, #f3ad17);
+    font-size: 1.35rem;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Section: Latest Work */
+#latestWork, 
+#getInTouch {
+    background: url(./img/latest\ work\ 00.png);
+}
+
+#latestWork .purple-overlay {
+    padding: 5rem 0;
+    height: 700px;
+    background: rgba(25, 0, 54, 0.8);
+}
+
+#latestWork .container-see-all a {
+    color: #f3433b;
+    font-size: 1.2rem;
+}
+
+#latestWork .container-see-all button {
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #f3433b;
+    color: #fff;
+}
+
+#latestWork .container-see-all:hover > button {
+    background: #fff;
+    color: #333;
+    transition: all 0.5s;
+}
+
+#latestWork .container-see-all:hover > a {
+    color: #fff;
+    transition: all 0.5s;
+} 
+
+#latestWork .carousel-inner img {
+    width: 608px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+}
+
+#latestWork .carousel-inner .carousel-caption {
+    background: rgba(0, 0, 0, 0.3);
+    right: 20%;
+    left: 20%;
+    width: 60%;
+}
+
+#latestWork .control-prev, 
+#latestWork .control-next {
+    position: absolute;
+    top: 50%;
+    border: 2px #eaeaea solid;
+    border-radius: 50%;
+    padding: 1rem;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    color: #333;
+} 
+
+#latestWork .control-prev {
+    left: 17.5%;
+}
+
+#latestWork .control-next {
+    right: 17.5%;
+}
+
+#latestWork .control-prev .fa-arrow-left, 
+#latestWork .control-next .fa-arrow-right {
+    color: #333;
+} 
+
+
+/* Section: Our Process */
+#ourProcess {
+    padding: 5rem 0;
+}
+
+#ourProcess img {
+    width: 300px;
+    border-radius: 0.75rem;
+}
+
+#ourProcess .card {
+    border: none;
+    border-radius: 0.75rem;
+}
+
+#ourProcess .card::before {
+    transition: width .3s linear, opacity .3s linear, visibility .3s linear;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 0.25rem;
+    content: "";
+    position: absolute;
+    border-radius: 0 0 0.75rem 0.75rem;
+    background-color: #f3433b;
+}
+
+#ourProcess .card-number {
+    position: absolute;
+    top: -1.75rem;
+    left: 1.25rem;
+    background: linear-gradient(-225deg, #f3433b, #f3ad17);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+
+/* Section: Why Us */
+#whyUs {
+    padding: 5rem 0;
+}
+
+#whyUs .lead {
+    font-weight: bold;
+    color: #f3433b;
+}
+
+#whyUs .icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    color: #f3433b;
+    background: #fff;
+} 
+
+#whyUs span {
+    color: #f3433b;
+}
+
+#whyUs img {
+    border-radius: 1rem;
+    height: 500px;
+}
+
+
+/* Section: Contact */
+#contactUs {
+    padding: 5rem 0;
+}
+
+#contactUs .card-item i {
+    font-size: 2rem;
+}
+
+#contactUs h4 {
+    color: #f3433b;
+}
+
+#contactUs .btn {
+    border-radius: 2rem;
+    width: 175px;
+    padding: 0.75rem 0;
+}
+
+#contactUs .contact {
+    background: #f3433b;
+    color: #fff;
+}
+
+#contactUs .direction {
+    background: #fff;
+    color: #333;
+    border: 2px solid #f3433b;
+}
+
+#contactUs img {
+    width: 100%;
+}
+
+#contactUs .card-location {
+    width: 60%;
+    position: absolute;
+    top: 12%;
+    left: 27.5%;
+}
+
+#contactUs .card-icon {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background: #f3433b;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+#contactUs .circle-1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+}
+
+#contactUs .circle-2 {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.8)
+}
+
+#contactUs .circle-3 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #eaeaea;
+}
+
+
+/* Section: Get in touch */
+#getInTouch .purple-overlay {
+    padding: 5rem 0;
+    background: rgba(25, 0, 54, 0.8);
+}
+
+#getInTouch .btn {
+    border-radius: 2rem;
+    width: 200px;
+    padding: 0.75rem 0;
+}
+
+#getInTouch .contact {
+    background: #f3433b;
+    color: #fff;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 540px) {
+    /* Section: About Us */
+    #aboutUs h2, 
+    #aboutUs p {
+        padding-bottom: 1rem;
+    }
+
+    #aboutUs img {
+        display: none;
+    }
+    
+    /* Section: Our Services */
+    #ourServices .container-icons {
+        flex-direction: column;
+    }
+
+    #ourServices .container-icons .icon {
+        margin-bottom: 2rem;
+    }
+
+
+    /* Section: Latest Work */
+    #latestWork .carousel-inner img {
+        width: 100%;
+        border-radius: 0.75rem;
+    }
+
+    #latestWork .control-prev {
+        left: -7.5%;
+    }
+    
+    #latestWork .control-next {
+        right: -7.5%;
+    }
+
+
+    /* Section: Our Process */
+    #ourProcess {
+        padding: 5rem 0 0 0;
+    }
+
+
+    /* Section: Contacts */
+    #contactUs {
+        padding: 0 0 5rem 0;
+    }
+
+    #contactUs .container-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contactUs .container-buttons .contact {
+        margin-bottom: 1rem;
+    }
+
+
+    /* Section: Get In Touch */
+    #getInTouch .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #getInTouch .container-section {
+        margin-bottom: 2rem;
+    }
+}
+
+
+@media (max-width: 720px) {
+    /* Navbar */
+    #navbarCollapse li a {
+        margin-right: 0;
+    }
+
+    #navbar .dropdown {
+        text-align: center;
+    }
+}
